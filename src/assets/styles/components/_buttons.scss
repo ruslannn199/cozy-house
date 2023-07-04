@@ -37,6 +37,16 @@
 
     &-right {
       transform: rotate(180deg);
+
+      @include media-mobile {
+        order: 3;
+      }
+    }
+
+    &-left {
+      @include media-mobile {
+        order: 2;
+      }
     }
   }
 
@@ -48,6 +58,17 @@
     border-radius: .9rem;
     background-color: $color-primary;
     @extend %h4;
+
+    &-img {
+      width: 3rem;
+      height: 2.3rem;
+    }
+
+    @include media-mobile {
+      font-size: 1.5rem;
+      line-height: 110%;
+      letter-spacing: .09rem;
+    }
   }
 
   &_primary,

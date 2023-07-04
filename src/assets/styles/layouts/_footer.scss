@@ -3,8 +3,8 @@
 
   &__wrapper {
     @include flex($justify: space-between);
-    width: 120rem;
     margin: 4rem 4rem 0;
+    gap: 16rem;
 
     @include media-tablet {
       flex-wrap: wrap;
@@ -17,17 +17,33 @@
     @include flex($align: flex-start, $flex-dir: column);
     gap: 4rem;
     width: 27.9rem;
+
+    @include media-mobile {
+      align-items: center;
+    }
   }
 
   &__location {
     @include flex($align: flex-start, $flex-dir: column);
     gap: 3.3rem;
     width: 30.2rem;
+
+    @include media-mobile {
+      align-items: center;
+    }
   }
 
   &__title {
     color: #fff;
     @extend %h3;
+
+    @include media-mobile {
+      font-size: 2.5rem;
+      line-height: 130%;
+      letter-spacing: .15rem;
+      text-align: center;
+      width: 27rem;
+    }
   }
 
   &__subtitle {
@@ -53,6 +69,10 @@
   &__link {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      color: $color-primary-light;
+    }
   }
 
   &__puppy {

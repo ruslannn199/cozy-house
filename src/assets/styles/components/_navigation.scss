@@ -2,6 +2,10 @@
   @include flex();
   column-gap: 3.5rem;
 
+  @include media-mobile {
+    display: none;
+  }
+
   &__link {
     color: $color-dark-l;
     text-decoration: none;
@@ -28,6 +32,7 @@
     &:active,
     &_active {
       color: $color-dark-l;
+      border-bottom: 3px solid $color-primary;
 
       .header_dark & {
         color: $color-light-s;

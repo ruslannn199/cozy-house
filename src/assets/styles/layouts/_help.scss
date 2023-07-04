@@ -8,6 +8,10 @@
     padding-right: 6.9rem;
   }
 
+  @include media-mobile {
+    padding: 4.2rem 1.5rem;
+  }
+
   &__wrapper {
     @include flex($flex-dir: column);
     padding: 0 8rem;
@@ -16,12 +20,22 @@
     @include media-tablet {
       padding: 0;
     }
+
+    @include media-mobile {
+      gap: 4.2rem;
+    }
   }
 
   &__heading {
     color: $color-dark-l;
     text-align: center;
     @extend %h3;
+
+    @include media-mobile {
+      font-size: 2.5rem;
+      line-height: 130%;
+      letter-spacing: .15rem;
+    }
   }
 
   &__list {
@@ -33,12 +47,29 @@
       column-gap: 6rem;
     }
 
+    @include media-mobile {
+      gap: 3rem;
+      justify-content: flex-start;
+    }
+
     &-item {
       @include flex($flex-dir: column);
       gap: 3rem;
 
       @include media-tablet {
-        width: 17rem;
+        width: 16.7rem;
+      }
+
+      @include media-mobile {
+        width: 12.7rem;
+        gap: 2rem;
+      }
+    }
+
+    &-image {
+      max-width: 6rem;
+      @include media-mobile {
+        max-width: 5rem;
       }
     }
 
@@ -46,6 +77,12 @@
       color: $color-dark-l;
       text-align: center;
       @extend %h4;
+
+      @include media-mobile {
+        font-size: 1.5rem;
+        line-height: 110%;
+        letter-spacing: .09rem;
+      }
 
       &:first-letter {
         text-transform: capitalize;

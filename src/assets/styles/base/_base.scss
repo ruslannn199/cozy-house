@@ -6,6 +6,10 @@
     font-size: 1.302vw;
   }
 
+  @include media-mobile {
+    font-size: 3.125vw;
+  }
+
   &::-webkit-scrollbar {
     width: 0.5rem;
   }

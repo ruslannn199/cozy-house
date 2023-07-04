@@ -15,6 +15,11 @@
       gap: 6rem;
       flex-direction: column-reverse;
     }
+
+    @include media-mobile {
+      margin: 4.2rem 1rem;
+      gap: 4.2rem;
+    }
   }
 
   &__dog {
@@ -23,11 +28,20 @@
     background-image: url(../../assets/images/donation-dog.png);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include media-mobile {
+      width: 26rem;
+      height: 13.52rem;
+    }
   }
 
   &__content {
     @include flex($align: flex-start, $flex-dir: column);
     gap: 2rem;
+
+    @include media-mobile {
+      align-items: center;
+    }
   }
 
   &__heading {
@@ -37,16 +51,34 @@
     &:first-letter {
       text-transform: uppercase;
     }
+
+    @include media-mobile {
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 130%;
+      letter-spacing: .15rem;
+    }
   }
 
   &__subheading {
     $color: $color-dark-l;
     @extend %h5;
+
+    @include media-mobile {
+      font-size: 1.5rem;
+      line-height: 160%;
+      letter-spacing: normal;
+    }
   }
 
   &__paragraph {
     width: 38rem;
     color: $color-dark-m;
     @extend %p-italic;
+
+    @include media-mobile {
+      width: 28rem;
+      text-align: justify;
+    }
   }
 }

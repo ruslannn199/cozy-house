@@ -5,9 +5,19 @@
   background-color: $color-light-s;
   padding-bottom: 3rem;
   transition: .2s;
+  cursor: pointer;
 
-  .friends &:nth-child(n+3) {
-    display: none;
+  @include media-tablet {
+    .friends &:nth-child(n+3) {
+      display: none;
+    }
+  }
+
+  @include media-mobile {
+    order: 1;
+    .friends &:nth-child(n+2) {
+      display: none;
+    }
   }
 
   &__ctn {
@@ -19,11 +29,16 @@
 
   &:hover {
     background-color: #fff;
+    outline: 2px solid $color-primary;
   }
 
   &__wrapper {
     @include flex();
     gap: 9rem;
+
+    @include media-tablet {
+      gap: 4rem;
+    }
   }
 
   &__image {
