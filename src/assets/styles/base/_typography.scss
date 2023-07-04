@@ -1,7 +1,56 @@
-.h1 {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 3.2rem;
+%h2 {
+  font-size: 4.4rem;
   font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: 0.192rem;
+  margin: 0;
+  @extend %serif;
+}
+
+%h3 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.21rem;
+  margin: 0;
+  @extend %serif;
+}
+
+%h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: 0.12rem;
+  margin: 0;
+  @extend %serif;
+}
+
+%h5 {
+  font-size: 1.5rem;
+  line-height: 110%;
+  font-weight: 400;
+  margin: 0;
+  @extend %serif;
+}
+
+%p {
+  font-size: 1.5rem;
+  line-height: 160%;
+  font-weight: 400;
+  margin: 0;
+  @extend %sans-serif;
+}
+
+%p-italic {
+  font-size: 1.2rem;
+  line-height: 150%;
+  font-weight: 400;
+  margin: 0;
+  font-style: italic;
+}
+
+%list-item {
+  font-size: 1.5rem; 
+  color: #000;
+  @extend %serif;
+  margin: 0;
+  line-height: 110%;
 }

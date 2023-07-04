@@ -1,0 +1,10 @@
+.header {
+  @include flex();
+
+  &__wrapper {
+    @include flex($justify: space-between);
+    width: 120rem;
+    height: 6rem;
+    margin: 3rem 4rem;
+  }
+}

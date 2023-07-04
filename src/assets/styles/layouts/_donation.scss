@@ -1,0 +1,36 @@
+.donation {
+  @include flex();
+  background-color: $color-light-l;
+
+  &__wrapper {
+    @include flex();
+    gap: 3rem;
+    width: 91.5rem;
+    background-color: inherit;
+    margin: 8rem 18.25rem 10rem;
+  }
+
+  &__dog {
+    width: 50.5rem;
+    height: 26.1rem;
+    background-image: url(../../assets/images/donation-dog.png);
+    background-repeat: no-repeat;
+    background-size:  cover;
+  }
+
+  &__content {
+    @include flex($flex-dir: column);
+  }
+
+  &__heading {
+
+  }
+
+  &__subheading {
+
+  }
+
+  &__paragraph {
+    @extend %p-italic;
+  }
+}

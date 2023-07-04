@@ -1,5 +1,7 @@
 // Abstract
 @import 'abstract/mixins';
+@import 'abstract/placeholders';
+@import 'abstract/variables';
 
 // Base
 @import 'base/fonts';
@@ -8,3 +10,14 @@
 
 // Components
 @import 'components/logo';
+@import 'components/navigation';
+@import 'components/buttons';
+@import 'components/card';
+
+// Layouts
+@import 'layouts/header';
+@import 'layouts/start-screen';
+@import 'layouts/about';
+@import 'layouts/pets';
+@import 'layouts/help';
+@import 'layouts/donation';

@@ -1,0 +1,33 @@
+.start-screen {
+  @include flex();
+
+  &__wrapper {
+    @include flex($justify: space-between);
+    width: 120rem;
+    height: 72.8rem;
+    margin: 6rem 4rem 0;
+  }
+
+  &__content {
+    @include flex($align: flex-start, $justify: center, $flex-dir: column);
+    gap: 4.2rem;
+  }
+
+  &__heading {
+    @extend %h2;
+    color: #fff;
+  }
+
+  &__subheading {
+    @extend %p;
+    width: 46rem;
+    color: $color-dark-s;
+  }
+
+  &__puppy {
+    width: 69.8rem;
+    height: 72.8rem;
+    background: url(../../assets/images/start-screen-puppy.png) no-repeat;
+    background-size: cover;
+  }
+}

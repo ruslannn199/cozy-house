@@ -1,0 +1,39 @@
+.help {
+  @include flex();
+  background-color: #fff;
+  padding: 8rem 4rem 10rem;
+
+  &__wrapper {
+    @include flex($flex-dir: column);
+    width: 120rem;
+    padding: 0 8rem;
+    gap: 6rem;
+  }
+
+  &__heading {
+    color: $color-dark-l;
+    text-align: center;
+    @extend %h3;
+  }
+
+  &__list {
+    @include flex($flex-wrap: wrap);
+    row-gap: 5.5rem;
+    column-gap: 12rem;
+
+    &-item {
+      @include flex($flex-dir: column);
+      gap: 3rem;
+    }
+
+    &-subheading {
+      color: $color-dark-l;
+      text-align: center;
+      @extend %h4;
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

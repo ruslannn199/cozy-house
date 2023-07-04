@@ -1,0 +1,36 @@
+.card {
+  @include flex($flex-dir: column);
+  gap: 3rem;
+  border-radius: .9rem;
+  background-color: $color-light-s;
+  padding-bottom: 3rem;
+
+  &__wrapper {
+    @include flex();
+    gap: 9rem;
+  }
+
+  &__image {
+    width: 27rem;
+    height: 27rem;
+    background-size: contain;
+
+    &_kathrine {
+      background-image: url(../../assets/images/pets/katrine.png);
+    }
+
+    &_jennifer {
+      background-image: url(../../assets/images/pets/jennifer.png);
+    }
+
+    &_woody {
+      background-image: url(../../assets/images/pets/woody.png);
+    }
+  }
+
+  &__title {
+    color: $color-dark-l;
+    text-align: center;
+    @extend %h4;
+  }
+}
