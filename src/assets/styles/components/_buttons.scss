@@ -30,6 +30,11 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    &:disabled {
+      border-color: $color-dark-s;
+      filter: invert(87%) sepia(0%) saturate(1024%) hue-rotate(154deg) brightness(91%) contrast(104%);
+    }
+
     &-right {
       transform: rotate(180deg);
     }
@@ -43,5 +48,16 @@
     border-radius: .9rem;
     background-color: $color-primary;
     @extend %h4;
+  }
+
+  &_primary,
+  &_secondary,
+  &_arrow,
+  &_pagination,
+  &_close {
+    transition: .25s;
+    &:hover {
+      background-color: $color-primary-light;
+    }
   }
 }

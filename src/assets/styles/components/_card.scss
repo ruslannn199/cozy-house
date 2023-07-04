@@ -4,6 +4,11 @@
   border-radius: .9rem;
   background-color: $color-light-s;
   padding-bottom: 3rem;
+  transition: .2s;
+
+  &:hover {
+    background-color: #fff;
+  }
 
   &__wrapper {
     @include flex();

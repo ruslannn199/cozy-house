@@ -1,6 +1,17 @@
 .html {
   font-size: 0.7813vw;
-  // font-size: 0.521vw;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.1rem $color-primary;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary-light;
+    border-radius: 1rem;
+  }
 }
 
 .body {

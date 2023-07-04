@@ -2,14 +2,59 @@
   @include flex();
 
   &__wrapper {
-    @include flex();
+    @include flex($justify: space-between);
     width: 120rem;
     margin: 4rem 4rem 0;
-    gap: 16rem;
+  }
+
+  &__contacts {
+    @include flex($align: flex-start, $flex-dir: column);
+    gap: 4rem;
+    width: 27.9rem;
+  }
+
+  &__location {
+    @include flex($align: flex-start, $flex-dir: column);
+    gap: 3.3rem;
+    width: 30.2rem;
+  }
+
+  &__title {
+    color: #fff;
+    @extend %h3;
+  }
+
+  &__subtitle {
+    @include flex($justify: flex-start);
+    gap: 2rem;
+    color: $color-primary;
+    @extend %h4;
+  }
+
+  &__icon {
+    &_mail,
+    &_phone {
+      width: 4rem;
+      height: 3.2rem;
+    }
+
+    &_location {
+      width: 2.2rem;
+      height: 3.2rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
   }
 
   &__puppy {
     @include flex();
-    background: url(../../assets/images/footer-puppy.png);
+    justify-self: flex-end;
+    width: 30rem;
+    height: 31rem;
+    background: url(../../assets/images/footer-puppy.png) no-repeat;
+    background-position: bottom;
   }
 }

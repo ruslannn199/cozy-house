@@ -5,7 +5,16 @@
   &__link {
     color: $color-dark-s;
     text-decoration: none;
+    transition: .15s;
     @extend %p;
+
+    &:hover {
+      color: $color-dark-3xl;
+
+      .header_dark & {
+        color: $color-light-s;
+      }
+    }
 
     &:active,
     &_active {
