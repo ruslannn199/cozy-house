@@ -3,11 +3,19 @@
   background-color: #fff;
   padding: 8rem 4rem 10rem;
 
+  @include media-tablet {
+    padding-left: 6.9rem;
+    padding-right: 6.9rem;
+  }
+
   &__wrapper {
     @include flex($flex-dir: column);
-    width: 120rem;
     padding: 0 8rem;
     gap: 6rem;
+
+    @include media-tablet {
+      padding: 0;
+    }
   }
 
   &__heading {
@@ -21,9 +29,17 @@
     row-gap: 5.5rem;
     column-gap: 12rem;
 
+    @include media-tablet {
+      column-gap: 6rem;
+    }
+
     &-item {
       @include flex($flex-dir: column);
       gap: 3rem;
+
+      @include media-tablet {
+        width: 17rem;
+      }
     }
 
     &-subheading {

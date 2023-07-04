@@ -8,6 +8,11 @@
     width: 120rem;
     margin: 8rem 4rem 10rem;
     background-color: $color-light-l;
+
+    @include media-tablet {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
   }
 
   &__heading {
@@ -19,5 +24,9 @@
   &__slider {
     @include flex();
     gap: 5.3rem;
+
+    @include media-tablet {
+      gap: 1.2rem;
+    }
   }
 }

@@ -8,6 +8,13 @@
     width: 91.5rem;
     background-color: inherit;
     margin: 8rem 18.25rem 10rem;
+
+    @include media-tablet {
+      margin-left: 13.2rem;
+      margin-right: 13.2rem;
+      gap: 6rem;
+      flex-direction: column-reverse;
+    }
   }
 
   &__dog {
@@ -15,7 +22,7 @@
     height: 26.1rem;
     background-image: url(../../assets/images/donation-dog.png);
     background-repeat: no-repeat;
-    background-size:  cover;
+    background-size: cover;
   }
 
   &__content {

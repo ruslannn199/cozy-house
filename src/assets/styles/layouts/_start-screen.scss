@@ -6,6 +6,15 @@
     width: 120rem;
     height: 72.8rem;
     margin: 6rem 4rem 0;
+
+    @include media-tablet {
+      margin: 3rem 10rem 0;
+      width: 56.9rem;
+      height: auto;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10rem;
+    }
   }
 
   &__content {
@@ -29,5 +38,10 @@
     height: 72.8rem;
     background: url(../../assets/images/start-screen-puppy.png) no-repeat;
     background-size: cover;
+
+    @include media-tablet {
+      width: 56.9rem;
+      height: 59.3rem;
+    }
   }
 }

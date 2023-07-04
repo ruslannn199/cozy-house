@@ -6,5 +6,9 @@
     width: 120rem;
     height: 6rem;
     margin: 3rem 4rem;
+
+    @include media-tablet {
+      margin: 3rem;
+    }
   }
 }

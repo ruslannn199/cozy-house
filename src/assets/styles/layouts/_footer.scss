@@ -5,6 +5,12 @@
     @include flex($justify: space-between);
     width: 120rem;
     margin: 4rem 4rem 0;
+
+    @include media-tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6rem;
+    }
   }
 
   &__contacts {
@@ -56,5 +62,6 @@
     height: 31rem;
     background: url(../../assets/images/footer-puppy.png) no-repeat;
     background-position: bottom;
+    background-size: contain;
   }
 }

@@ -6,6 +6,10 @@
   padding-bottom: 3rem;
   transition: .2s;
 
+  .friends &:nth-child(n+3) {
+    display: none;
+  }
+
   &__ctn {
     @include flex($flex-wrap: wrap);
     padding: 1.5rem 0;

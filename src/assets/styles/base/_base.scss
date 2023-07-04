@@ -2,6 +2,10 @@
   font-size: 0.7813vw;
   scroll-behavior: smooth;
 
+  @include media-laptop {
+    font-size: 1.302vw;
+  }
+
   &::-webkit-scrollbar {
     width: 0.5rem;
   }
