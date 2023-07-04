@@ -3,13 +3,22 @@
   column-gap: 3.5rem;
 
   &__link {
-    color: $color-dark-s;
+    color: $color-dark-l;
     text-decoration: none;
     transition: .15s;
     @extend %p;
 
+    .header_dark & {
+      color: $color-dark-s;
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
     &:hover {
       color: $color-dark-3xl;
+      border-bottom: 3px solid $color-primary;
 
       .header_dark & {
         color: $color-light-s;
@@ -18,8 +27,11 @@
 
     &:active,
     &_active {
-      color: $color-light-s;
-      border-bottom: 3px solid $color-primary;
+      color: $color-dark-l;
+
+      .header_dark & {
+        color: $color-light-s;
+      }
     }
   }
 }

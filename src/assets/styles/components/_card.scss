@@ -6,6 +6,13 @@
   padding-bottom: 3rem;
   transition: .2s;
 
+  &__ctn {
+    @include flex($flex-wrap: wrap);
+    padding: 1.5rem 0;
+    row-gap: 3rem;
+    column-gap: 3.8rem;
+  }
+
   &:hover {
     background-color: #fff;
   }

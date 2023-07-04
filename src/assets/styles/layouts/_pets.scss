@@ -1,23 +1,11 @@
 .pets {
-  @include flex();
-  background-color: $color-light-l;
-
-  &__wrapper {
-    @include flex($flex-dir: column);
-    gap: 6rem;
-    width: 120rem;
-    margin: 8rem 4rem 10rem;
-    background-color: $color-light-l;
-  }
+  @include flex($flex-dir: column);
+  gap: 4.5rem;
+  padding: 8rem 4rem 10rem;
 
   &__heading {
-    text-align: center;
     color: $color-dark-l;
+    text-align: center;
     @extend %h3;
-  }
-
-  &__slider {
-    @include flex();
-    gap: 5.3rem;
   }
 }
