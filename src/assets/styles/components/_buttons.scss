@@ -34,4 +34,14 @@
       transform: rotate(180deg);
     }
   }
+
+  &_donation {
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    color: $color-dark-l;
+    border-radius: .9rem;
+    background-color: $color-primary;
+    @extend %h4;
+  }
 }

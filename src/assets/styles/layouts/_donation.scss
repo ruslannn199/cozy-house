@@ -19,18 +19,27 @@
   }
 
   &__content {
-    @include flex($flex-dir: column);
+    @include flex($align: flex-start, $flex-dir: column);
+    gap: 2rem;
   }
 
   &__heading {
+    $color: $color-dark-l;
+    @extend %h3;
 
+    &:first-letter {
+      text-transform: uppercase;
+    }
   }
 
   &__subheading {
-
+    $color: $color-dark-l;
+    @extend %h5;
   }
 
   &__paragraph {
+    width: 38rem;
+    color: $color-dark-m;
     @extend %p-italic;
   }
 }

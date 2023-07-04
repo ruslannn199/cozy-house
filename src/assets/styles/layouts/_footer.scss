@@ -1,0 +1,15 @@
+.footer {
+  @include flex();
+
+  &__wrapper {
+    @include flex();
+    width: 120rem;
+    margin: 4rem 4rem 0;
+    gap: 16rem;
+  }
+
+  &__puppy {
+    @include flex();
+    background: url(../../assets/images/footer-puppy.png);
+  }
+}
