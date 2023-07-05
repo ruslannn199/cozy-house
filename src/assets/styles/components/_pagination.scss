@@ -1,0 +1,37 @@
+.pagination {
+  @include flex();
+  gap: 2rem;
+
+  @include media-mobile {
+    gap: 1rem;
+  }
+
+  &__btn {
+    @include flex();
+    padding: 1.5rem;
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 10rem;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    cursor: pointer;
+    transition: .25s;
+    @extend %h4;
+
+    &:hover:not(:disabled) {
+      background-color: $color-primary-light;
+    }
+
+    &:active:not(:disabled),
+    &_active:not(:disabled) {
+      color: $color-dark-3xl;
+      background-color: $color-primary;
+    }
+
+    &:disabled {
+      color: $color-dark-s;
+      border-color: $color-dark-s;
+      cursor: not-allowed;
+    }
+  }
+}

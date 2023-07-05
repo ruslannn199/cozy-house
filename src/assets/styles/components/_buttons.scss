@@ -1,0 +1,83 @@
+.btn {
+  @include flex($flex-dir: column);
+  text-decoration: none;
+  padding: 1.5rem 4.5rem;
+  border-radius: 10rem;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.102rem;
+  cursor: pointer;
+  color: $color-dark-3xl;
+  @extend %serif;
+  border: none;
+
+  &_primary {
+    background-color: $color-primary;
+  }
+
+  &_secondary {
+    border: 2px solid $color-primary;
+    background-color: transparent;
+  }
+
+  &_arrow {
+    @include flex();
+    padding: 2.3rem;
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    background-image: url(../../assets/images/svg/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:disabled {
+      border-color: $color-dark-s;
+      filter: invert(87%) sepia(0%) saturate(1024%) hue-rotate(154deg) brightness(91%) contrast(104%);
+    }
+
+    &-right {
+      transform: rotate(180deg);
+
+      @include media-mobile {
+        order: 3;
+      }
+    }
+
+    &-left {
+      @include media-mobile {
+        order: 2;
+      }
+    }
+  }
+
+  &_donation {
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    color: $color-dark-l;
+    border-radius: .9rem;
+    background-color: $color-primary;
+    @extend %h4;
+
+    &-img {
+      width: 3rem;
+      height: 2.3rem;
+    }
+
+    @include media-mobile {
+      font-size: 1.5rem;
+      line-height: 110%;
+      letter-spacing: .09rem;
+    }
+  }
+
+  &_primary,
+  &_secondary,
+  &_arrow,
+  &_close {
+    transition: .25s;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}

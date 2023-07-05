@@ -1,0 +1,75 @@
+.card {
+  @include flex($flex-dir: column);
+  gap: 3rem;
+  border-radius: .9rem;
+  background-color: $color-light-s;
+  padding-bottom: 3rem;
+  transition: .2s;
+  cursor: pointer;
+
+  @include media-tablet {
+    .friends &:nth-child(n+3) {
+      display: none;
+    }
+
+    .pets &:nth-child(n+7) {
+      display: none;
+    }
+  }
+
+  @include media-mobile {
+    order: 1;
+    .friends &:nth-child(n+2) {
+      display: none;
+    }
+
+    .pets &:nth-child(n+4) {
+      display: none;
+    }
+  }
+
+  &__ctn {
+    @include flex($flex-wrap: wrap);
+    padding: 1.5rem 0;
+    row-gap: 3rem;
+    column-gap: 3.8rem;
+  }
+
+  &:hover {
+    background-color: #fff;
+    outline: 2px solid $color-primary;
+  }
+
+  &__wrapper {
+    @include flex();
+    gap: 9rem;
+
+    @include media-tablet {
+      gap: 4rem;
+    }
+  }
+
+  &__image {
+    width: 27rem;
+    height: 27rem;
+    background-size: contain;
+
+    &_kathrine {
+      background-image: url(../../assets/images/pets/katrine.png);
+    }
+
+    &_jennifer {
+      background-image: url(../../assets/images/pets/jennifer.png);
+    }
+
+    &_woody {
+      background-image: url(../../assets/images/pets/woody.png);
+    }
+  }
+
+  &__title {
+    color: $color-dark-l;
+    text-align: center;
+    @extend %h4;
+  }
+}
