@@ -2,7 +2,7 @@
   font-size: 0.7813vw;
   scroll-behavior: smooth;
 
-  @include media-laptop {
+  @include media-tablet {
     font-size: 1.302vw;
   }
 
@@ -10,15 +10,17 @@
     font-size: 3.125vw;
   }
 
-  &::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-  &::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 0.1rem $color-primary;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $color-primary-light;
-    border-radius: 1rem;
+  @media screen and (min-width: $mobile-width) {
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 0.1rem $color-primary;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary-light;
+      border-radius: 1rem;
+    }
   }
 }
 
@@ -32,5 +34,9 @@
     .footer {
       background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     }
+  }
+
+  &_locked {
+    overflow: hidden;
   }
 }

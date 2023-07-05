@@ -1,49 +1,19 @@
 import 'normalize.css';
 import './assets/styles/global.scss';
 import json from './assets/json/pets.json';
+import App from './components/app/app';
 
-const menu = document.querySelector('.menu');
-const toggle = document.querySelector('.menu-toggle');
-const screen = document.querySelector('.screen');
-const screenPopup = document.querySelectorAll('.screen')[1];
-const wrapper = document.querySelector('.wrapper');
-const petsList = document.getElementById('pets-list');
-const popup = document.querySelector('.popup');
-let pageNumber = 1;
-let currentWidth: number = document.documentElement.clientWidth;
-let screenWidth: number = document.documentElement.clientWidth;
+// const screenPopup = document.querySelectorAll('.screen')[1];
+// const wrapper = document.querySelector('.wrapper');
+// const petsList = document.getElementById('pets-list');
+// const popup = document.querySelector('.popup');
+// let pageNumber = 1;
+// let currentWidth: number = document.documentElement.clientWidth;
+// let screenWidth: number = document.documentElement.clientWidth;
 
-// Бургер-меню
-
-// toggle.addEventListener('click', toggleMenu);
-// if (currentWidth < 768) {
-//   screen.addEventListener('click', toggleMenu);
-//   menu.addEventListener('click', toggleMenu);
-// } else {
-//   screen.removeEventListener('click', toggleMenu);
-//   menu.removeEventListener('click', toggleMenu);
-// }
-// window.addEventListener('resize', burgerResize);
-// function burgerResize() {
-//   screenWidth = document.documentElement.clientWidth;
-//   if (screenWidth < 768) {
-//     screen.addEventListener('click', toggleMenu);
-//     menu.addEventListener('click', toggleMenu);
-//   } else {
-//     screen.removeEventListener('click', toggleMenu);
-//     menu.removeEventListener('click', toggleMenu);
-//     toggle.classList.remove('open');
-//     menu.classList.remove('menu-open');
-//     screen.classList.remove('screen-blacked');
-//     document.body.classList.remove('overflow');
-//   }
-// }
-// function toggleMenu() {
-//   toggle.classList.toggle('open');
-//   menu.classList.toggle('menu-open');
-//   screen.classList.toggle('screen-blacked');
-//   document.body.classList.toggle('overflow');
-// }
+window.addEventListener('DOMContentLoaded', () => {
+  const app = new App();
+})
 
 // // Слайдер
 
