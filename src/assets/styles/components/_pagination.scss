@@ -2,6 +2,10 @@
   @include flex();
   gap: 2rem;
 
+  @include media-mobile {
+    gap: 1rem;
+  }
+
   &__btn {
     @include flex();
     padding: 1.5rem;
@@ -18,8 +22,8 @@
       background-color: $color-primary-light;
     }
 
-    &:active,
-    &_active {
+    &:active:not(:disabled),
+    &_active:not(:disabled) {
       color: $color-dark-3xl;
       background-color: $color-primary;
     }

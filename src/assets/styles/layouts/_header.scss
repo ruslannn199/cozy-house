@@ -21,7 +21,11 @@
     display: none;
     width: 3rem;
     height: 2px;
-    background-color: $color-primary;
+    background-color: #000;
+
+    .header_dark & {
+      background-color: $color-primary;
+    }
 
     &::before,
     &::after {
@@ -30,7 +34,11 @@
       width: 3rem;
       height: 2px;
       left: 0;
-      background-color: $color-primary;
+      background-color: #000;
+
+      .header_dark & {
+        background-color: $color-primary;
+      }
     }
 
     &::before {

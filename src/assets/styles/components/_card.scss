@@ -11,11 +11,19 @@
     .friends &:nth-child(n+3) {
       display: none;
     }
+
+    .pets &:nth-child(n+7) {
+      display: none;
+    }
   }
 
   @include media-mobile {
     order: 1;
     .friends &:nth-child(n+2) {
+      display: none;
+    }
+
+    .pets &:nth-child(n+4) {
       display: none;
     }
   }

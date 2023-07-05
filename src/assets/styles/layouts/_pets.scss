@@ -3,6 +3,16 @@
   gap: 4.5rem;
   padding: 8rem 4rem 10rem;
 
+  @include media-tablet {
+    padding: 8rem 6rem 7.6rem;
+    gap: 3.5rem;
+  }
+
+  @include media-mobile {
+    padding: 4.2rem 1rem;
+    gap: 4.2rem;
+  }
+
   &__heading {
     color: $color-dark-l;
     text-align: center;
